@@ -1,23 +1,25 @@
 const jsonServer = require("json-server");
 const path = require("path");
-const axios = require("axios");
+const cors = require('cors')
+// const axios = require("axios");
 
 const server = jsonServer.create();
 const router = jsonServer.router(path.join(__dirname, "db.json"), {
   foreignKeySuffix: "_id",
 });
 const middlewares = jsonServer.defaults();
-const paymentMiddleware = require("./middlewares/payment");
+// const paymentMiddleware = require("./middlewares/payment");
 
 const isAuthorized = () => {
   return true;
 };
 
-server.use(middlewares);
+server.use(cors())
 
 // To handle POST, PUT and PATCH you need to use a body-parser
 // You can use the one used by JSON Server
 server.use(jsonServer.bodyParser);
+server.use(middlewares);
 
 // Access control
 server.use((req, res, next) => {
