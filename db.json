@@ -1,0 +1,163 @@
+{
+  "echo": [],
+  "test": [],
+  "paymentmethod": [
+    {
+      "name": "MTN",
+      "description": "Paiement via MTN",
+      "created_at": 1681899379014,
+      "updated_at": 1681899379014,
+      "id": 1
+    },
+    {
+      "name": "ORANGE",
+      "description": "Paiement via ORANGE",
+      "created_at": 1681899379014,
+      "updated_at": 1681899379014,
+      "id": 2
+    }
+  ],
+  "university": [
+    {
+      "name": "Université des Montagnes",
+      "number": "123456789",
+      "location": "Bangangté",
+      "telephone": "654343323",
+      "created_at": 1681900651316,
+      "updated_at": 1681900651316,
+      "id": 1
+    }
+  ],
+  "universityaccount": [
+    {
+      "university_id": 1,
+      "bank_name": "UBA",
+      "account_number": "43211234",
+      "created_at": 1681901001822,
+      "updated_at": 1681901001822,
+      "id": 1
+    }
+  ],
+  "major": [
+    {
+      "university_id": 1,
+      "name": "INFO",
+      "created_at": 1681901631894,
+      "updated_at": 1681901631894,
+      "id": 1
+    }
+  ],
+  "class": [
+    {
+      "major_id": 1,
+      "level": "INFO1",
+      "created_at": 1681901842224,
+      "updated_at": 1681901842224,
+      "id": 1
+    }
+  ],
+  "fees": [
+    {
+      "type": "INSCRIPTION",
+      "due_date": "1681901842224",
+      "created_at": 1681902488288,
+      "updated_at": 1681902488288,
+      "id": 1
+    },
+    {
+      "type": "PRE-INSCRIPTION",
+      "due_date": "1681901842224",
+      "created_at": 1681902527339,
+      "updated_at": 1681902527339,
+      "id": 2
+    },
+    {
+      "type": "SCOLARITE",
+      "due_date": "1681901842224",
+      "created_at": 1681902558661,
+      "updated_at": 1681902558661,
+      "id": 3
+    }
+  ],
+  "class_fees": [
+    {
+      "class_id": 1,
+      "fees_id": 1,
+      "amount": 20000,
+      "year": 2023,
+      "created_at": 1681903163021,
+      "updated_at": 1681903163021,
+      "id": 1
+    },
+    {
+      "class_id": 1,
+      "fees_id": 2,
+      "amount": 5000,
+      "year": 2023,
+      "created_at": 1681903364230,
+      "updated_at": 1681903364230,
+      "id": 2
+    },
+    {
+      "class_id": 1,
+      "fees_id": 3,
+      "amount": 645000,
+      "year": 2023,
+      "created_at": 1681903378947,
+      "updated_at": 1681903378947,
+      "id": 3
+    }
+  ],
+  "quitus": [
+    {
+      "code": "A1Z2E3R4",
+      "university_id": 1,
+      "created_at": 1681903772023,
+      "updated_at": 1681903772023,
+      "id": 1
+    }
+  ],
+  "student": [
+    {
+      "university_id": 1,
+      "class_id": 1,
+      "fees_id": 2,
+      "matricule": "STU1423",
+      "student_name": "Takal",
+      "date_of_birth": "1681903772023",
+      "place_of_birth": "BAFOUSSAM",
+      "created_at": 1681904162393,
+      "updated_at": 1681904162393,
+      "id": 1
+    }
+  ],
+  "user": [
+    {
+      "username": "fred",
+      "email": "fred@gmail.com",
+      "password": "fred",
+      "phone_number": "654871211",
+      "balance": 0,
+      "created_at": 1681905846116,
+      "updated_at": 1681905846116,
+      "id": 1
+    }
+  ],
+  "payment": [
+    {
+      "amount": 10000,
+      "payment_date": 1681904162393,
+      "user_id": 1,
+      "paymentmethod_id": 1,
+      "class_fees": 1,
+      "student_id": 1,
+      "phone_number": "656123456",
+      "university_id": 1,
+      "created_at": 1682178670000,
+      "updated_at": 1682178670000,
+      "remaining_amount": 0,
+      "is_complete": false,
+      "id": 1
+    }
+  ]
+}
